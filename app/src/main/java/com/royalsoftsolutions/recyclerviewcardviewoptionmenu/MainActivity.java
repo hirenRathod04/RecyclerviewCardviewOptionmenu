@@ -39,6 +39,7 @@ private EditText etText;
                 String text = etText.getText ().toString ().trim ();
                 listItems.add ( new Recycleritem ( text  , "welcome" ) );
                 myAdepter.updateList ( listItems );
+                //myAdepter.notifyDataSetChanged ();
                 recyclerView.setAdapter ( myAdepter );
 
                 Toast.makeText ( MainActivity.this,"ok",Toast.LENGTH_SHORT ).show ();

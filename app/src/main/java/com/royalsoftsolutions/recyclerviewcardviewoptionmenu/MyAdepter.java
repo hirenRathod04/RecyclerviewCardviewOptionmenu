@@ -88,7 +88,6 @@ public class MyAdepter extends RecyclerView.Adapter<MyAdepter.ViewHolder> {
             txtTile = itemView.findViewById ( R.id.txtTile );
             txtDiscription = itemView.findViewById ( R.id.txtDiscription );
             txtOptionDigit = itemView.findViewById ( R.id.txtOptionDigit );
-
         }
     }
 }
