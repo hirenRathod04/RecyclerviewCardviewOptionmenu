@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ private RecyclerView recyclerView;
 private MyAdepter myAdepter;
 private List<Recycleritem> listItems = new ArrayList<> (  );
 private EditText etText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -28,14 +30,18 @@ private EditText etText;
         myAdepter = new MyAdepter ( listItems,MainActivity.this );
         recyclerView.setAdapter ( myAdepter );
 
-        etText = findViewById ( R.id.etText);
+
         Button button =findViewById ( R.id.button );
         button.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
+                etText = findViewById ( R.id.etTextr);
                 String text = etText.getText ().toString ().trim ();
                 listItems.add ( new Recycleritem ( text  , "welcome" ) );
                 myAdepter.updateList ( listItems );
+                recyclerView.setAdapter ( myAdepter );
+
+                Toast.makeText ( MainActivity.this,"ok",Toast.LENGTH_SHORT ).show ();
             }
         } );
 

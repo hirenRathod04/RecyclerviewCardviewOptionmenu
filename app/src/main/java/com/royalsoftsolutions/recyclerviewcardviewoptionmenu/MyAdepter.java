@@ -25,8 +25,8 @@ public class MyAdepter extends RecyclerView.Adapter<MyAdepter.ViewHolder> {
         this.mcontext = mcontext;
     }
 
-    public void updateList(List<Recycleritem> list) {
-        this.listItems = list;
+    public void updateList(List<Recycleritem> listItems) {
+        this.listItems = listItems;
     }
 
     @NonNull
